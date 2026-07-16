@@ -6,6 +6,13 @@
 using namespace std;
 
 int main(){
+    string uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    string lowercase = "abcdefghijklmnopqrstuvwxyz";
+    string digits = "0123456789";
+    string symbols = "!@#$%^&*()-_=+[]{}<>?";
+
+    string allChars = uppercase + lowercase + digits + symbols;
+    
     cout<<"Wifi Password Generator";
     int length;
     cout << "Enter password length: ";
