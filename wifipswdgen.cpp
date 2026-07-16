@@ -10,5 +10,9 @@ int main(){
     int length;
     cout << "Enter password length: ";
     cin >> length;
+    if (length < 8 || length > 32) {
+        cout << "Password length should be between 8 and 32." << endl;
+        return 1;
+    }
     return 0;
 }
