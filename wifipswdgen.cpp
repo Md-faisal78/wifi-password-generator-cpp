@@ -21,5 +21,24 @@ int main(){
         cout << "Password length should be between 8 and 32." << endl;
         return 1;
     }
+
+    random_device rd;
+    mt19937 generator(rd());
+    uniform_int_distribution<> distribution(0, allChars.size() - 1);
+
+    string password;
+
+    // Ensure at least one character from each category
+    password += uppercase[distribution(generator) % uppercase.size()];
+    password += lowercase[distribution(generator) % lowercase.size()];
+    password += digits[distribution(generator) % digits.size()];
+    password += symbols[distribution(generator) % symbols.size()];
+
+    // Fill the remaining characters
+    while (password.length() < length) {
+        password += allChars[distribution(generator)];
+    }
+
+    
     return 0;
 }
