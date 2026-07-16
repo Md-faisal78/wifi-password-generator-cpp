@@ -39,6 +39,8 @@ int main(){
         password += allChars[distribution(generator)];
     }
 
+    // Shuffle the password
+    shuffle(password.begin(), password.end(), generator);
     
     return 0;
 }
