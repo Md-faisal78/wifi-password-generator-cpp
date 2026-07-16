@@ -41,6 +41,9 @@ int main(){
 
     // Shuffle the password
     shuffle(password.begin(), password.end(), generator);
+
+    cout << "\nGenerated Wi-Fi Password:\n";
+    cout << password << endl;
     
     return 0;
 }
